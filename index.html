@@ -1,0 +1,56 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/heartbeat.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.js"></script>
+
+  </head>
+  <body ng-app="">
+    <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Heart Beat</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+
+        <li><a href="#">Open</a></li>
+        <li><a href="#">Save</a></li>
+      </ul>
+
+    </div>
+    </nav>
+    <div  class="container-fluid">
+      <div class="row hb_main_container">
+
+        <!--Toolbar-->
+        <div id="toolbar" class="col-sm-3" >
+          <input type="text" ng-model="size">
+
+        </div>
+
+        <!--Main Window-->
+        <div id="main_window" class="col-sm-9" >
+          <div class="panel panel-info" style="height:{{size}}px">
+            <div class="panel-heading">row<span class="right"><i class="fa fa-times" aria-hidden="true"></i></span></div>
+              <div class="panel-body">
+                <p ng-bind="size"></p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+  </html>

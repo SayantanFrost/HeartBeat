@@ -1,0 +1,40 @@
+/*bootstrap overrides*/
+
+.navbar
+{
+ border-radius:0px !important;
+ min-height:35px !important;
+ margin-bottom: 0px !important;
+}
+
+
+
+/*heartbeat css*/
+
+/*Classes*/
+.hb_main_container > div{
+
+  height:92vh;
+}
+.left
+{
+  float:left;
+}
+.right
+{
+  float:right;
+}
+
+
+
+/*IDs*/
+#toolbar
+{
+ padding-top: 10px;
+ background-color:#ff9a9a;
+}
+#main_window
+{
+ padding-top: 10px;
+ background-color:lavender;
+}
