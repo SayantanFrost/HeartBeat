@@ -10,7 +10,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/angular.js"></script>
-
+  <script src="js/heartbeat.min.js"></script>
   </head>
   <body ng-app="">
     <nav class="navbar navbar-inverse">
@@ -30,20 +30,44 @@
       <div class="row hb_main_container">
 
         <!--Toolbar-->
-        <div id="toolbar" class="col-sm-3" >
-          <input type="text" ng-model="size">
+        <div id="toolbar" class="col-sm-2" >
+          <!--<input type="text" ng-model="size">-->
+
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <span class="panel-title">
+                  Grids
+                  <a data-toggle="collapse" data-parent="#accordion" class="right" href="#collapse1">
+                    <i  class="fa fa-plus-circle collapsible_icon" aria-hidden="true"></i>
+                  </a>
+                </span>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li draggable="true" ondragstart="drag(event)" id="12c" class="list-group-item">12 cols<span class="badge">drag</span></li>
+                    <li draggable="true" ondragstart="drag(event)" id="6-6c" class="list-group-item">6-6 cols<span class="badge">drag</span></li>
+                    <li draggable="true" ondragstart="drag(event)" id="4-8c" class="list-group-item">4-8 cols<span class="badge">drag</span></li>
+                    <li draggable="true" ondragstart="drag(event)" id="4-4-4c" class="list-group-item">4-4-4 cols<span class="badge">drag</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
         </div>
 
         <!--Main Window-->
-        <div id="main_window" class="col-sm-9" >
-          <div class="panel panel-info" style="height:{{size}}px">
-            <div class="panel-heading">row<span class="right"><i class="fa fa-times" aria-hidden="true"></i></span></div>
-              <div class="panel-body">
+        <div id="main_window" class="col-sm-10" >
+          <div ondrop="drop(event)" ondragover="allowDrop(event)" class="panel panel-info " style="height:300px">
+            <div class="panel-heading">
+              Widget
+              <span class="right"><i class="fa fa-times" aria-hidden="true"></i></span>
+            </div>
+            <div class="panel-body droparea">
                 <p ng-bind="size"></p>
-
-              </div>
-
             </div>
 
           </div>
@@ -51,6 +75,7 @@
         </div>
       </div>
     </div>
+
 
   </body>
   </html>

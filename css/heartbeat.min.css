@@ -6,7 +6,10 @@
  min-height:35px !important;
  margin-bottom: 0px !important;
 }
-
+.list-group > .list-group-item
+{
+  cursor:pointer;
+}
 
 
 /*heartbeat css*/
@@ -24,8 +27,10 @@
 {
   float:right;
 }
-
-
+.collapsible_icon
+{
+  font-size:23px;
+}
 
 /*IDs*/
 #toolbar
