@@ -36,6 +36,17 @@
   height:200px;
   border:1px solid #ccc;
 }
+.control_box
+{
+  position:absolute;
+  background:gray;
+  width:75px;
+  height:25px !important;
+  top:40px;
+  right:27px;
+  border-radius:3px;
+  padding-right: 5px;
+}
 /*IDs*/
 #toolbar
 {
